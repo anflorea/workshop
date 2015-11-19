@@ -37,6 +37,7 @@ char	**break_by_comma(char *line)
 			tab[i][j] = line[index];
 			j++;
 		}
+		index++;
 	}
 	return (tab);
 }
@@ -49,7 +50,6 @@ t_student		getInfoFromStudent(char	*line)
 	char		**tab;
 
 	tab = break_by_comma(line);
-	write(1, "I am here!\n", 11);
 	strcpy(student.surname, tab[0]);
 	strcpy(student.name, tab[1]);
 	strcpy(student.email_address, tab[2]);
